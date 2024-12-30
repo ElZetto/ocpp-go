@@ -11,7 +11,6 @@ const (
 )
 
 type PropertyViolation struct {
-	error
 	Property string
 }
 
@@ -330,4 +329,7 @@ func init() {
 	_ = Validate.RegisterValidation("phase16", isValidPhase)
 	_ = Validate.RegisterValidation("location16", isValidLocation)
 	_ = Validate.RegisterValidation("unitOfMeasure", isValidUnitOfMeasure)
+	_ = Validate.RegisterValidation("certificateSigningUse16", isValidCertificateSigningUse)
+	_ = Validate.RegisterValidation("certificateUse16", isValidCertificateUse)
+	_ = Validate.RegisterValidation("genericStatus16", isValidGenericStatus)
 }
